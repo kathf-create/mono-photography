@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="Logo">
+            </div>
+            <div class="header-text">
+                <h1>Contact</h1>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main id="contact-main">
+        <div class="form-container">
+            <form name="contactForm" action="#">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name">Admin Contact Name</label>
+                        </td>
+                        <td>
+                            <input name="name" type="text" id="name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="location">Location of Business (Address)</label>
+                        </td>
+                        <td>
+                            <input name="location" type="text" id="location" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Preferred Contact Method</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="contact-method-email" name="contact-method" value="email" onchange="toggleContactMethod()">
+                            <label for="contact-method-email">Email</label>
+                            <input type="radio" id="contact-method-phone" name="contact-method" value="phone" onchange="toggleContactMethod()">
+                            <label for="contact-method-phone">Phone</label>
+                        </td>
+                    </tr>
+                    <tr id="contact-method-email-field" style="display: none;">
+                        <td>
+                            <label for="contact-email">Email Address</label>
+                        </td>
+                        <td>
+                            <input name="contact-email" type="email" id="contact-email" />
+                        </td>
+                    </tr>
+                    <tr id="contact-method-phone-field" style="display: none;">
+                        <td>
+                            <label for="contact-phone">Phone Number</label>
+                        </td>
+                        <td>
+                            <input name="contact-phone" type="tel" id="contact-phone" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="reason">Reason For Contact Request</label>
+                        </td>
+                        <td>
+                            <select id="reason">
+                                <option disabled selected>Please Select</option>
+                                <option value="1">General Inquiry</option>
+                                <option value="2">School or Stage</option>
+                                <option value="3">Studio</option>
+                                <option value="4">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="checkbox" id="updates" name="updates">
+                            <label for="updates">Yes, confirm my details are correct</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit" class="myButton">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <!-- Sign-up form section -->
+            <form name="signupForm" action="#">
+                <h2>Sign Up to Access Images</h2>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="username">Username</label>
+                        </td>
+                        <td>
+                            <input name="username" type="text" id="username" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">Password</label>
+                        </td>
+                        <td>
+                            <input name="password" type="password" id="password" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit" class="myButton">Sign Up</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <p class="copyright">Copyright Katharine Farley 2024</p>
+    </footer>
+    <script>
+        function toggleContactMethod() {
+            var emailField = document.getElementById('contact-method-email-field');
+            var phoneField = document.getElementById('contact-method-phone-field');
+            if (document.getElementById('contact-method-email').checked) {
+                emailField.style.display = '';
+                phoneField.style.display = 'none';
+            } else if (document.getElementById('contact-method-phone').checked) {
+                emailField.style.display = 'none';
+                phoneField.style.display = '';
+            }
+        }
+    </script>
+</body>
+</html>
