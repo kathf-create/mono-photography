@@ -173,6 +173,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center; 
+  flex-wrap: wrap;
 }
 
 .footer-icons a {
@@ -203,6 +204,65 @@ footer {
 footer .copyright {
   margin-top: 10px;
   font-size: 12px;
+}
+
+/* Footer navigation styles */
+.footerNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0; 
+}
+
+.footerNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footerNav ul li {
+  margin: 0 15px;
+}
+
+.footerNav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footerNav ul li a:hover {
+  color: #c298ec;
+}
+
+/* Responsive footer styles */
+@media (max-width: 768px) {
+  .footer-icons i,
+  .footer-icons .social-icon {
+    font-size: 40px;
+    margin: 0 10px;
+  }
+
+  .footerNav ul li {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-icons i,
+  .footer-icons .social-icon {
+    font-size: 30px;
+    margin: 0 5px;
+  }
+
+  footer {
+    padding: 15px 0;
+  }
+
+  .footerNav ul li {
+    margin: 0 5px;
+  }
 }
 
 /* Form styles */
@@ -346,6 +406,7 @@ input[type="checkbox"] {
     padding: 10px 20px;
     font-size: 12px;
   }
+  
 }
 
 /* Sign-up form styles */
