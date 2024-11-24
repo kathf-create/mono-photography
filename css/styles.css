@@ -1,6 +1,6 @@
 /* General styles */
 body {
-  font-family: 'Poppins', sans-serif; /* Default font for body text */
+  font-family: 'Poppins', sans-serif; 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,8 +10,8 @@ body {
 
 /* Headings styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif; /* Heading font */
-  font-weight: 700; /* Adjust weight for headings */
+  font-family: 'Playfair Display', serif; 
+  font-weight: 700;
   margin: 0;
 }
 
