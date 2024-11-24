@@ -1,11 +1,18 @@
 /* General styles */
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif; /* Default font for body text */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-weight: 300;
   color: #000000;
+}
+
+/* Headings styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif; /* Heading font */
+  font-weight: 700; /* Adjust weight for headings */
+  margin: 0;
 }
 
 /* Header styles */
@@ -34,6 +41,7 @@ header {
 }
 
 header h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 2rem;
   margin: 0;
   padding: 0 15px;
@@ -121,6 +129,7 @@ main {
 }
 
 .gallery h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 2rem;
   margin-bottom: 10px;
   color: #000000;
@@ -155,6 +164,7 @@ main {
 }
 
 .gallery h3 {
+  font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -406,7 +416,6 @@ input[type="checkbox"] {
     padding: 10px 20px;
     font-size: 12px;
   }
-  
 }
 
 /* Sign-up form styles */
@@ -416,26 +425,3 @@ form[name="signupForm"] {
 
 form[name="signupForm"] h2 {
   text-align: center;
-  margin-bottom: 20px;
-}
-
-form[name="signupForm"] table {
-  margin: 0 auto;
-}
-
-form[name="signupForm"] table td {
-  padding: 10px;
-}
-
-form[name="signupForm"] label {
-  font-weight: 500;
-}
-
-form[name="signupForm"] input[type="text"],
-form[name="signupForm"] input[type="password"] {
-  width: calc(100% - 20px);
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
